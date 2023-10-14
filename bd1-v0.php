@@ -29,15 +29,14 @@ echo $AzureMysqDbname. "\n";
 echo $AzureMysqPort. "\n";
 
 
-/*
+
 $conn = mysqli_init(); 
 mysqli_ssl_set($conn,NULL,NULL, $MysqlAttrSslCa, NULL, NULL); 
 mysqli_real_connect($conn, $AzureMysqlHost, $AzureMysqUsername, $AzureMysqPassword,$AzureMysqDbname, $AzureMysqPort, MYSQLI_CLIENT_SSL);
 
 
-
 echo 'Éxito... ' . $conn->host_info . "\n";
-*/
+
 exit;
 
 
