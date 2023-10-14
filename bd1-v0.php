@@ -14,9 +14,17 @@ mysqli_ssl_set($conn,NULL,NULL, "/home/site/wwwroot/ssl/DigiCertGlobalRootCAP1.c
 mysqli_real_connect($conn, "lmatephpbdp1-server.mysql.database.azure.com", "miuserbd", "Afdoydli88$", "miespacio_base", 3306, MYSQLI_CLIENT_SSL);
 */
 
+$MysqlAttrSslCa =  env('MYSQL_ATTR_SSL_CA');
+$AzureMysqlHost =  env('AZURE_MYSQL_HOST');
+$AzureMysqUsername =  env('AZURE_MYSQL_USERNAME');
+$AzureMysqPassword =  env('AZURE_MYSQL_PASSWORD');
+$AzureMysqDbname =  env('AZURE_MYSQL_DBNAME');
+$AzureMysqPort =  env('AZURE_MYSQL_PORT');
+
+
 $conn = mysqli_init(); 
-mysqli_ssl_set($conn,NULL,NULL, env(), NULL, NULL); 
-mysqli_real_connect($conn, "lmatephpbdp1-server.mysql.database.azure.com", "miuserbd", "Afdoydli88$", "miespacio_base", 3306, MYSQLI_CLIENT_SSL);
+mysqli_ssl_set($conn,NULL,NULL, $MysqlAttrSslCa, NULL, NULL); 
+mysqli_real_connect($conn, $AzureMysqlHost, $AzureMysqUsername, $AzureMysqPassword,$AzureMysqDbname, $AzureMysqPort, MYSQLI_CLIENT_SSL);
 
 echo 'Éxito... ' . $conn->host_info . "\n";
 
