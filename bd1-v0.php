@@ -14,12 +14,12 @@ mysqli_ssl_set($conn,NULL,NULL, "/home/site/wwwroot/ssl/DigiCertGlobalRootCAP1.c
 mysqli_real_connect($conn, "lmatephpbdp1-server.mysql.database.azure.com", "miuserbd", "Afdoydli88$", "miespacio_base", 3306, MYSQLI_CLIENT_SSL);
 */
 
-$MysqlAttrSslCa =  env('MYSQL_ATTR_SSL_CA');
-$AzureMysqlHost =  env('AZURE_MYSQL_HOST');
-$AzureMysqUsername =  env('AZURE_MYSQL_USERNAME');
-$AzureMysqPassword =  env('AZURE_MYSQL_PASSWORD');
-$AzureMysqDbname =  env('AZURE_MYSQL_DBNAME');
-$AzureMysqPort =  env('AZURE_MYSQL_PORT');
+$MysqlAttrSslCa =  getenv('MYSQL_ATTR_SSL_CA');
+$AzureMysqlHost =  getenv('AZURE_MYSQL_HOST');
+$AzureMysqUsername =  getenv('AZURE_MYSQL_USERNAME');
+$AzureMysqPassword =  getenv('AZURE_MYSQL_PASSWORD');
+$AzureMysqDbname =  getenv('AZURE_MYSQL_DBNAME');
+$AzureMysqPort =  getenv('AZURE_MYSQL_PORT');
 
 
 $conn = mysqli_init(); 
