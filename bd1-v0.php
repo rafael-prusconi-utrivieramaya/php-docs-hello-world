@@ -21,23 +21,23 @@ $AzureMysqPassword =  getenv('AZURE_MYSQL_PASSWORD');
 $AzureMysqDbname =  getenv('AZURE_MYSQL_DBNAME');
 $AzureMysqPort =  getenv('AZURE_MYSQL_PORT');
 
-echo $MysqlAttrSslCa;
-echo $AzureMysqlHost;
-echo $AzureMysqUsername;
-echo $AzureMysqPassword;
-echo $AzureMysqDbname;
-echo $AzureMysqPort;
+echo $MysqlAttrSslCa . "\n";
+echo $AzureMysqlHost. "\n";
+echo $AzureMysqUsername. "\n";
+echo $AzureMysqPassword. "\n";
+echo $AzureMysqDbname. "\n";
+echo $AzureMysqPort. "\n";
 
 
 /*
 $conn = mysqli_init(); 
 mysqli_ssl_set($conn,NULL,NULL, $MysqlAttrSslCa, NULL, NULL); 
 mysqli_real_connect($conn, $AzureMysqlHost, $AzureMysqUsername, $AzureMysqPassword,$AzureMysqDbname, $AzureMysqPort, MYSQLI_CLIENT_SSL);
-*/
+
 
 
 echo 'Éxito... ' . $conn->host_info . "\n";
-
+*/
 exit;
 
 
