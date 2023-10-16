@@ -21,12 +21,12 @@ $AzureMysqPassword =  getenv('AZURE_MYSQL_PASSWORD');
 $AzureMysqDbname =  getenv('AZURE_MYSQL_DBNAME');
 $AzureMysqPort =  getenv('AZURE_MYSQL_PORT');
 
-echo $MysqlAttrSslCa . "\n";
-echo $AzureMysqlHost. "\n";
-echo $AzureMysqUsername. "\n";
-echo $AzureMysqPassword. "\n";
-echo $AzureMysqDbname. "\n";
-echo $AzureMysqPort. "\n";
+echo "<p>" . $MysqlAttrSslCa . "<\p>";
+echo "<p>" . $AzureMysqlHost. "<\p>";
+echo "<p>" . $AzureMysqUsername. "<\p>";
+echo "<p>" . $AzureMysqPassword. "<\p>";
+echo "<p>" . $AzureMysqDbname. "<\p>";
+echo "<p>" . $AzureMysqPort. "<\p>";
 
 
 
